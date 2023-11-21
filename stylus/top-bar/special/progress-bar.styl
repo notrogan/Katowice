@@ -1,0 +1,51 @@
+.progress-bar-wrapper {
+	flex 1
+	
+	// border 3px solid green
+
+	&.--left {
+		padding .0rem .0rem .0rem 0rem
+	}
+
+	&.--right {
+		// border 3px solid green
+		position absolute
+		bottom 4.32rem
+		padding .0rem .0rem .0rem 0rem
+	}
+}
+
+.progress-bar {
+	opacity 1
+	flex 1
+	// background rgba(6, 33, 73, 0.7)
+
+	&.--left {
+		// transform skewX(20deg)
+	}
+
+	&.--right {
+		// transform skewX(-20deg)
+	}
+
+	.fill {
+		// bottom -1rem
+		width 12.31rem
+
+		background: #ff1a00
+		height 7rem
+
+		&.--planting {
+			opacity: 0
+			// background $red
+		}
+
+		&.--left {
+			transform-origin bottom
+		}
+
+		&.--right {
+			transform-origin bottom
+		}
+	}
+}

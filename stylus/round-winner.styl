@@ -1,0 +1,153 @@
+@keyframes roundWinnerBackgroundAndInner {
+	from,
+	15% {
+		transform-origin: top
+		transform: scaleY(0%)
+		opacity 0
+	}
+
+	to {
+		transform-origin: top
+		transform: scaleY(100%)
+	}
+}
+
+.round-winner {
+
+	&.active-enter-active {
+		.background,
+		.flag,
+		.inner {
+			animation roundWinnerBackgroundAndInner .4s backwards ease
+		}
+	}
+
+	&.active-leave-active {
+		.background,
+		.flag,
+		.inner {
+			animation roundWinnerBackgroundAndInner .4s forwards ease reverse
+		}
+	}
+
+	transition: all 1s ease-in-out
+
+	width 30vw
+	margin 0 auto
+
+	&.--t {
+
+		teamColors()
+		position absolute
+		height 4.5rem
+		top 8.5rem
+		left 102.05rem
+		width 48.25rem	
+
+		// &.--false {
+		// 	teamColors()
+		// 	position absolute
+		// 	height 4.5rem
+		// 	top 8.5rem
+		// 	left 102.05rem
+		// 	width 48.25rem		
+		// }
+
+		// &.--true {
+		// 	teamColors()
+		// 	position absolute
+		// 	height 4.5rem
+		// 	top 8.5rem
+		// 	right 102.05rem
+		// 	width 49.33rem
+		// }
+	}
+
+	&.--ct {
+
+		teamColors()
+		position absolute
+		height 4.5rem
+		top 8.5rem
+		right 102.05rem
+		width 49.33rem
+
+		// &.--false {
+		// 	teamColors()
+		// 	position absolute
+		// 	height 4.5rem
+		// 	top 8.5rem
+		// 	right 102.05rem
+		// 	width 49.33rem
+		// }
+
+		// &.--true {
+		// 	teamColors()
+		// 	position absolute
+		// 	height 4.5rem
+		// 	top 8.5rem
+		// 	left 102.05rem
+		// 	width 48.25rem		
+		// }
+	}
+
+
+	color #fff
+	// filter drop-shadow(0 0 .4rem rgba(#000, .5))
+
+	.inner-wrapper {
+		display grid
+
+		> * {
+			grid-area 1/1
+		}
+	}
+
+	.inner {
+		position relative
+		bottom 1.97rem
+		padding 2rem
+		z-index 1
+	}
+
+	.flag,
+	.background {
+	}
+
+	.flag {
+		
+		opacity .6
+
+		&.--horizontal-flag {
+			background-position center
+			background-size contain
+		}
+
+		&.--vertical-flag,
+		&.--unusual-flag {
+			background-position center
+			background-repeat no-repeat
+			background-size cover
+		}
+	}
+
+	.background {
+		height 4.5rem
+		background rgba(5, 27, 60, .98)
+		border-radius: 0px 0px 20px 20px
+	}
+
+	.team-name {
+		teamColors()
+		flsize(4rem, 1)
+	}
+
+	.phrase {
+		flsize(3rem, 1)
+		margin .775rem 0 1.2rem 0
+	}
+
+	.reason {
+		flsize(2rem, 1)
+	}
+}

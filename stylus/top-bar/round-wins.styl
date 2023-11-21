@@ -1,0 +1,50 @@
+.round-wins {
+	leftRightArea()
+	position relative
+	display flex
+	justify-content flex-end
+	&.--left {
+		left 0rem
+		teamColors()
+		// color #ffc901
+		// color #09b1eb
+		position relative
+		
+		.inner {
+			padding 0 0rem 0 0rem
+		}
+	}
+
+	&.--right {
+		teamColors()
+		// color #ffc901
+		// color #09b1eb
+		flex-direction row-reverse
+		position relative
+
+		.inner {
+			padding 0 0rem 0 0rem
+		}
+	}
+
+	.inner {
+		height: 7rem
+		border-bottom: 3px solid
+
+		background rgba(5, 27, 60, .98)
+
+		width (1.65ch + 1.15rem + .6rem)
+		font-weight bold
+		z-index 3
+		text-align: center
+	}
+
+	.diagonal {
+		teamBackground()
+		opacity: 0
+
+		width 1.5rem
+		height 100%
+		z-index 2
+	}
+}

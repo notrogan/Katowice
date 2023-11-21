@@ -1,0 +1,248 @@
+.center {
+	position relative
+	top 8rem
+	right 1.6rem
+	margin 0 3.5rem
+
+	.diagonal-wrapper {
+		position absolute
+		top 0
+		bottom 0
+		z-index 2
+
+		// &.--left {
+		// 	left -.75rem
+
+		// 	.diagonal {
+		// 		transform skewX(20deg)
+		// 	}
+		// }
+
+		// &.--right {
+		// 	right -.75rem
+
+		// 	.diagonal {
+		// 		transform skewX(-20deg)
+		// 	}
+		// }
+
+		.diagonal {
+			teamBackground()
+		// 	width 1.5rem
+		// 	height 100%
+		}
+	}
+
+	.first-row {
+		position relative
+		bottom 10rem
+		// width calc(100%)
+		transform translateX(-1.525rem)
+
+		> .inner {
+			display grid
+
+			> * {
+				grid-area 1/1
+			}
+
+			.flag-wrapper {
+				.flag {
+		
+					position relative
+					left 13rem
+					width 35rem
+					background rgba(6, 33, 73, .96)
+					// flag()
+					min-height 100%
+					border-radius: 15px 15px 0px 0px
+				}
+			}
+
+			.inner {
+				display flex
+				align-items center
+				justify-content space-evenly
+
+				padding 0 1.25rem
+				// background rgba(#000, .5)
+				
+				z-index 1
+
+				.flag-icon {
+					max-height 0rem
+					// filter drop-shadow(0 0 .4rem rgba(#fff, .25))
+				}
+
+				.player-name {
+					teamColors()
+					// color rgba(6, 33, 73, 0.7)
+					position relative
+					// border 1px solid
+					flsize(2.5rem, 1)
+					margin-left: 12rem
+					margin-right: 8.5rem
+					padding .85rem 0 .85rem 0
+					flex 1
+
+					text-align center
+					// text-shadow 0 0 1rem rgba(#000, .75)
+				}
+			}
+		}
+	}
+
+	.second-row {
+		z-index -1
+		position relative
+		bottom 10rem
+		width calc(100% + 3.05rem)
+		transform translateX(-1.525rem)
+
+		.inner {
+			width 13rem
+			height: 4rem
+			display flex
+			justify-content space-around
+
+			padding 0 0rem 0 1rem
+			border-radius: 15px 0px 0px 0px
+			background rgba(6, 33, 73, 0.96)
+
+
+			// .stats {
+			// 	// MM: Set display to None to remove the whole section.
+			// 	display flex;
+			// 	// display: none;
+			// 	margin-right 1rem
+			// 	// opacity: 0
+
+			// 	&.--ct .label {
+			// 		color $ct
+			// 	}
+
+			// 	&.--t .label {
+			// 		color $t
+			// 	}
+
+			// 	.stat {
+			// 		padding .5rem 1rem
+
+			// 		.label {
+			// 			flsize(1.2rem, 1)
+			// 		}
+
+			// 		.number {
+			// 			flsize(2rem, 1)
+			// 			width 1ch
+			// 		}
+			// 	}
+			// }
+
+			.utility {
+				opacity 0
+				// border: 1px solid yellow;
+				display flex
+				
+				img {
+					height 2.5rem
+				}
+
+				.bomb {
+					center()
+					// left()
+					width 3rem
+					opacity .6
+					margin-right 0rem
+					// border: 1px solid blue;
+				}
+
+				.grenades {
+					center()
+					// align left
+					// left()
+					width 12rem
+					margin-right 40rem
+					// border: 1px solid red;
+
+					img {
+						margin 0 .5rem .5rem
+						width 2rem
+
+						&:not(.--active),
+						&.--active + .--active {
+							opacity .6
+						}
+					}
+				}
+			}
+
+			.stats {
+				// border 1px solid
+				// MM: Set display to None to remove the whole section.
+				// border: 1px solid white;
+				display flex;
+				// display: none;
+				margin-right -145rem
+				position relative
+				bottom 3.66rem
+				// opacity: 0
+
+				&.--ct .label {
+					color $ct
+				}
+
+				&.--t .label {
+					color $t
+				}
+
+				.stat {
+					position relative
+					right 3.66rem
+					padding .5rem 2rem
+
+					.label {
+						// border 1px solid
+						flsize(1.5rem, 1)
+					}
+
+					.number {
+						position relative
+						width 5rem
+						text-align: center
+						// border 1px solid
+						flsize(2rem, 1)
+						width 3ch
+					}
+				}
+			}
+		}
+	}
+
+	.third-row {
+		z-index -1
+		position relative
+		left 49.5rem
+		bottom 4rem
+		width calc(100% + 3.05rem)
+		transform translateX(-1.525rem)
+		.inner {
+			background rgba(6, 33, 73, 0.96)
+			border-radius: 0px 15px 0px 0px
+		}
+	}
+
+	.fourth-row {
+		z-index -1
+		position relative
+		left 14.5rem
+		bottom 8rem
+		width calc(100% + 3.05rem)
+		transform translateX(-1.525rem)
+		.inner {
+			width 35rem
+			background rgba(6, 33, 73, 0.93 )
+			border-radius: 0px 0px 0px 0px
+		}
+	}
+}

@@ -1,0 +1,51 @@
+.life {
+	position relative
+	right 62.5rem
+	top 14rem
+	opacity 1
+	// border 1px solid
+	line-height 3rem
+	font-size 2.5rem
+
+	&,
+	.inner {
+		margin-left auto
+	}
+
+	.inner {
+		z-index 999
+		position relative
+		right 51.5rem
+		top 4.5rem
+		// border 1px solid
+		text-align: left
+		align-items left
+		padding 0 1rem
+		// transform skewX(20deg)
+		transform skewX(0deg)
+	}
+
+	.health,
+	.armor {
+		opacity: 1
+		position relative
+		bottom 14.33rem
+		left 65rem
+		display flex
+		align-items center
+		padding .6rem 0rem
+		// transform skewX(-20deg)
+		transform skewX(0deg)
+
+		img {
+			text-align: left
+			height 2rem
+			margin-right .0rem
+		}
+
+		.number {
+			width 2.75ch
+			text-align right
+		}
+	}
+}

@@ -1,0 +1,31 @@
+.pip {
+	opacity: 1
+	teamBorder()
+	margin .5rem
+
+	height 1rem
+	width 1rem
+
+	&.--filled {
+		background #fff
+		border-color #fff
+	}
+
+	&.--ct {
+		border-color rgba($ct, .75)
+
+		&.--filled {
+			background $ct
+			border-color $ct
+		}
+	}
+
+	&.--t {
+		border-color rgba($t, .75)
+
+		&.--filled {
+			background $t
+			border-color $t
+		}
+	}
+}

@@ -1,0 +1,108 @@
+.map-wins {
+	opacity: 1
+	leftRightArea(leftMeta, rightMeta)
+
+	display flex
+	justify-content flex-end
+
+	&.--left {
+		.pips {
+			flex-direction row-reverse
+		}
+
+		.pip:first-child {
+			margin-right 0
+		}
+
+		.diagonal {
+			// transform translateX(.4rem) skewX(20deg)
+		}
+	}
+
+	&.--right {
+		flex-direction row-reverse
+
+		.pip:first-child {
+			margin-left 0
+		}
+
+		.diagonal {
+			// transform translateX(-1.15rem) skewX(-20deg)
+		}
+	}
+
+	.pips {
+
+		&.--right {
+			border-radius: 0px 0px 10px 0px
+			.pip {
+				border-radius: 3px
+				left 0.33rem
+				position relative
+				width $pipSize
+				height $pipSize
+				margin-right 1rem
+				margin-left 0.5rem
+			}
+		}
+
+		&.--left {
+			border-radius: 0px 0px 0px 10px
+			.pip {
+				border-radius: 3px
+				left 0.33rem
+				position relative
+				width $pipSize
+				height $pipSize
+				margin-right 1rem
+				margin-left 0.5rem
+			}
+		}
+
+		$pipSize = 1.1rem
+		$pipMarginX = 0.33rem
+
+		display flex
+		justify-content center
+		width 5.2 * $pipSize + 5 * $pipMarginX
+		background rgba(6, 33, 73, 0.9)
+
+	}
+
+	.bof {
+		&.--left {
+			background rgba(5, 27, 60, 0.9)
+			right 44.2rem
+			position absolute
+			width 12.33rem
+			height: 2rem
+			// border 1px solid red	
+		}
+
+		.inner {
+			position absolute
+			&.--left {
+				opacity: 0
+			}
+
+			&.--right {
+				// border 1px solid red
+				width 12.25rem
+				height 2rem
+				top 4.5rem
+				left 44.25rem
+				font-size: 1.5rem
+			}
+		}
+	}
+	.diagonal-wrapper {
+		width .75rem
+		overflow hidden
+	}
+
+	.diagonal {
+		width 0rem
+		height 100%
+		z-index 2
+	}
+}

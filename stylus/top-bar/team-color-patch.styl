@@ -1,0 +1,51 @@
+.team-color-patch {
+	leftRightArea()
+	display flex
+	z-index 2
+	height: 7rem
+
+	&.--left {
+		.inner {
+			position relative
+			right 10.75rem
+			border-radius: 15px 0px 0px 0px
+			// transform translateX(-.75rem) skewX(20deg)
+		}
+	}
+
+	&.--right {
+		justify-content flex-end
+
+		.inner {
+			position relative
+			left 4rem
+			border-radius: 0px 15px 0px 0px
+			// transform translateX(.75rem) skewX(-20deg)
+		}
+	}
+
+	.team {
+		.team-img {
+			// border 1px solid red
+			position relative
+			top 0.66rem
+			z-index 999
+			width: 65px
+			height: 65px
+		}
+		&.--right {
+			position relative
+			left 10.33rem
+		}	
+		&.--left {
+			position relative
+			right 4.4rem
+		}	
+	}
+
+	.inner {
+		background: #1c4b6e
+		width 7rem
+		height 100%
+	}
+}

@@ -1,0 +1,175 @@
+.economy-wrapper {
+	// overflow hidden
+}
+
+.economy {
+	border-radius: 15px 15px 0px 0px
+	background: rgb(43, 184, 88)
+
+	// border: 1px solid blue
+
+	opacity: 1
+
+	position: relative
+	top: 1rem
+
+	display flex
+	align-items center
+	justify-content space-between
+	padding 0rem 0rem
+
+	color rgb(255, 255, 255)
+	line-height 0.5em
+	transition opacity .5s ease, transform .5s ease
+
+	&:not(.--active) {
+		opacity 0
+		transform translateY(100%)
+	}
+
+	&.--right {
+		flex-direction row-reverse
+	}
+
+	.valueEco {
+		position relative
+		top -0.75rem
+		padding: 0 1rem 0 1rem	
+	}
+
+	.heading3 {
+		// border: 1px solid red
+		opacity: 1
+
+		position: relative
+		top: 3.35rem
+		right: 0rem
+		margin: 0rem 3rem 0rem 3rem
+
+		flsize(1.5rem, 1)
+
+		text-transform uppercase
+		letter-spacing .075em
+		padding-bottom 0rem
+	}
+
+	.heading2 {
+		// border: 1px solid red
+		opacity: 0.1
+
+		position: relative
+		top: 3.35rem
+		right: 0rem
+		margin: 0rem 3rem 0rem 3rem
+
+		flsize(1.5rem, 1)
+
+		text-transform uppercase
+		letter-spacing .075em
+		padding-bottom 0rem
+	}
+
+	.heading {
+		// border: 1px solid red
+		opacity: 1
+		position: relative
+		top: 3.75rem
+		margin: 0rem 3rem 0rem 3rem
+		right: 0rem
+
+		flsize(1.5rem, 1)
+
+		text-transform uppercase
+		letter-spacing .075em
+		padding-bottom 0rem
+	}
+
+	.economy-recommendation {
+		// border: 1px solid red
+		opacity: 1
+		position: relative
+		top: 3.75rem
+		right: 0rem
+		margin: 0rem 3rem 0rem 3rem
+
+		flsize(1.5rem, 1)
+
+		text-transform uppercase
+		letter-spacing .075em
+		padding-bottom 0rem	}
+
+	.economy-recommendation-active {
+		opacity: 1
+	}
+
+	.economy-recommendation-disabled {
+		opacity: 0.1
+	}
+
+	.loss-bonus {
+		.heading {
+			
+			position: relative
+			top: 0.5rem
+			right: 0rem
+
+			border: 1px solid red
+			opacity: 1
+			grid-area heading
+		}
+
+		.pips-and-value {
+			opacity 1
+			display flex
+			align-items center
+			justify-content space-between
+
+			&.--left {
+				opacity: 0
+				.pip {
+					&:last-child {
+						margin-left 0
+					}
+				}
+
+				.value {
+					position relative
+					top 2.5rem
+
+					opacity 0
+					margin-left 1rem
+				}
+			}
+
+			&.--right {
+				opacity: 0
+				flex-direction row-reverse
+
+				.pip {
+					&:first-child {
+						opacity: 0
+						margin-right 0
+					}
+				}
+
+				.value {
+					opacity: 0
+					margin-right 1rem
+				}
+			}
+
+			.pip {
+				opacity 0
+				margin-top 0
+				margin-bottom 0
+			}
+		}
+
+		.loss-bonus-pips {
+			center()
+			opacity: 0
+			grid-area pips
+			flex-direction row-reverse
+		}
+	}
+}

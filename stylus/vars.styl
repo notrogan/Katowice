@@ -1,0 +1,109 @@
+$ct = #1592D2
+$t = #ffaa0c
+$red = #e2421b
+$green = #9bae81
+
+$generalPaddingX = 2rem
+$generalPaddingY = 1.5rem
+
+flsize($s, $m) {
+	font-size $s
+	line-height $s * $m
+}
+
+leftRight($name) {
+	&.--left {
+		grid-area $name + '1'
+	}
+
+	&.--right {
+		grid-area $name + '2'
+	}
+}
+
+leftRightArea($left = left, $right = right) {
+	&.--left {
+		grid-area $left
+	}
+
+	&.--right {
+		grid-area $right
+	}
+}
+
+area($name) {
+	.{$name} {
+		leftRight($name)
+		{block}
+	}
+}
+
+center() {
+	display flex
+	align-items center
+	justify-content center
+}
+
+teamBackground_R($alpha = 1) {
+	&.--ct {
+		background linear-gradient(90deg, rgba(21,147,230,1) 0%, rgba(14,109,171,1) 50%, rgba(10,48,78,1) 100%)
+	}
+
+	&.--t {
+		background linear-gradient(90deg, rgba(255,199,0,1) 0%, rgba(233,167,0,1) 50%, rgba(109,82,0,1) 100%)
+	}
+}
+
+teamBackground_L($alpha = 1) {
+	&.--ct {
+		background linear-gradient(90deg, rgba(10,48,78,1) 0%, rgba(14,109,171,1) 50%, rgba(21,147,230,1) 100%)
+	}
+
+	&.--t {
+		background linear-gradient(90deg, rgba(109,82,0,1) 0%, rgba(233,167,0,1) 50%, rgba(255,199,0,1) 100%)
+	}
+}
+
+teamBomb($alpha = 1) {
+	&.--ct {
+		background: rgb(11, 92, 255)
+	}
+
+	&.--t {
+		background: rgb(255, 38, 38)
+	}
+}
+
+teamColorsTop($alpha = 1) {
+	&.--ct {
+		color #051b3c
+	}
+
+	&.--t {
+		color #051b3c
+	}
+}
+
+teamColors() {
+	&.--ct {
+		color #09b1eb
+	}
+
+	&.--t {
+		color #ffc901
+	}
+}
+
+teamBorder() {
+	&.--ct {
+		border 2px solid #09b1eb
+	}
+
+	&.--t {
+		border 2px solid #ffc901
+	}
+}
+
+animationSeconds(seconds, duration = 1) {
+	return seconds / duration * 100%
+}
