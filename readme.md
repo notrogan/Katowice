@@ -8,6 +8,7 @@ This is based off an older version of the original HUD by [drweissbrot](https://
 
 1. install yarn in the project directory
 2. run `yarn package` to create an executable
-3. run executable while cs is in `fullscreen windowed` mode
+3. add the included `.cfg` file to the cs game directory
+4. run executable while cs is in `fullscreen windowed` mode
 
 Note that in order for the HUD to work properly, there needs to be a `.svg` in the `teams` folder that matches the team name, otherwise the HUD will not show up.
