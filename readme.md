@@ -1,7 +1,7 @@
 # cs-hud
-A Free and Customizable Spectator HUD for Your Counter-Strike 2 (and CS:GO) Streams.
+Customizable Spectator HUD for Your Counter-Strike 2 (and CS:GO) Streams Based Off the Katowice 2019 HUD.
 
-![](assets/cs2-hud-screenshot-1080.png)
+![](preview.png)
 
 ## Getting Started
 The easiest way is to use the pre-packaged binaries, but other options will be available in the future.
