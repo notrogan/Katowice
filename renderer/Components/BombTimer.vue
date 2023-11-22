@@ -51,7 +51,7 @@ export default {
 
 		active() {
 			if (this.side === 't') return ['planting', 'planted', 'defusing'].includes(this.bomb.state)
-			if (this.side === 'ct') return this.bomb.state === 'defusing'
+			// if (this.side === 'ct') return this.bomb.state === 'defusing'
 		},
 	},
 
@@ -77,26 +77,26 @@ export default {
 				}
 			}
 
-			if (this.side === 'ct') {
-				if (now.state === 'defusing' && previous.state !== 'defusing') {
-					this.defuseDuration = (
-						this.allplayers[now.player].state
-						&& this.allplayers[now.player].state.defusekit || false
-					) ? 5 : 10
+			// if (this.side === 'ct') {
+			// 	if (now.state === 'defusing' && previous.state !== 'defusing') {
+			// 		this.defuseDuration = (
+			// 			this.allplayers[now.player].state
+			// 			&& this.allplayers[now.player].state.defusekit || false
+			// 		) ? 5 : 10
 
-					if (! this.bombTimerScaleInterval) {
-						this.bombTimerScale = 1
+			// 		if (! this.bombTimerScaleInterval) {
+			// 			this.bombTimerScale = 1
 
-						this.bombTimerScaleInterval = setInterval(() => {
-							this.bombTimerScale -= .1 / this.defuseDuration
+			// 			this.bombTimerScaleInterval = setInterval(() => {
+			// 				// this.bombTimerScale -= .1 / this.defuseDuration
 
-							if (this.bombTimerScale < 0) this.clearBombTimerScaleInterval()
-						}, 100)
-					}
-				} else if (now.state !== 'defusing' && (! previous || previous.state === 'defusing')) {
-					this.clearBombTimerScaleInterval()
-				}
-			}
+			// 				if (this.bombTimerScale < 0) this.clearBombTimerScaleInterval()
+			// 			}, 100)
+			// 		}
+			// 	} else if (now.state !== 'defusing' && (! previous || previous.state === 'defusing')) {
+			// 		this.clearBombTimerScaleInterval()
+				// }
+			// }
 		},
 
 		timers(now) {

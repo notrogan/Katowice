@@ -47,7 +47,7 @@ export default {
 
 		sync() {
 			this.win_team = this.round.win_team ? this.round.win_team.toLowerCase() : this.round.win_team
-			this.half = this.map.round > 12
+			this.half = this.map.round > 15
 		},
 	},
 
