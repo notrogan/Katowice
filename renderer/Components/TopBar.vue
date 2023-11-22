@@ -54,7 +54,12 @@
 				</div>
 
 				<div :class="`team-name --${direction} --${directionalSides[Number(direction === 'right')]}`">
-					{{ team.name || (directionalSides[Number(direction === 'right')] === 'ct' ? 'Counter-Terrorists' : 'Terrorists') }}
+					<div v-if="team.name=='GRAYHOUND.Rivalry'">
+						{{ 'Grayhound' || (directionalSides[Number(direction === 'right')] === 'ct' ? 'Counter-Terrorists' : 'Terrorists') }}
+					</div>
+					<div v-else>
+						{{ team.name || (directionalSides[Number(direction === 'right')] === 'ct' ? 'Counter-Terrorists' : 'Terrorists') }}
+					</div>
 				</div>
 
 				<div :class="`round-wins --${direction} --${directionalSides[Number(direction === 'right')]}`">

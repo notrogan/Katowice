@@ -10,13 +10,14 @@
 			</div>
 		</div>
 	
+
 		<SidebarPlayer
 			v-for="(player, index) in players"
 			:adr="adr[player.steamid]"
 			:direction="direction"
 			:freezetime="freezetime"
 			:key="player.steamid"
-			:observerSlot="observerSlotSortingEnabled ? (index + (direction === 'right' ? 6 : 1)) : player.observer_slot"
+			:observerSlot="player.observer_slot == 9 ? 0 : player.observer_slot + 1"
 			:player="player"
 			:side="side"
 		/>

@@ -17,7 +17,7 @@
 		</div>
 
 		<div :class="`slot --${direction}`">
-			<!-- <div class="digit">{{ observerSlot === 10 ? 0 : observerSlot }}</div> -->
+			<!-- <div class="digit">{{ player.observer_slot + 1 }}</div> -->
 		</div>
 
 		<div class="name">

@@ -46,10 +46,12 @@ export default {
 
 			return players.sort((a, b) => {
 				if (! this.observerSlotSortingEnabled) {
+					// no idea why this works, but it does
 					a = a.observer_slot === 0 ? 10 : a.observer_slot
-					b = b.observer_slot === 0 ? 10 : b.observer_slot
+					// b = b.observer_slot === 0 ? 10 : b.observer_slot
 
-					return a - b
+					// return a - b
+					return a
 				}
 
 				a = a.name.toLowerCase()
